@@ -35,6 +35,7 @@ const AddProduct = () => {
                     confirmButtonText: 'quit'
                   })
             }
+            form.reset()
            })
     }
     return (
@@ -80,7 +81,7 @@ const AddProduct = () => {
                         <span className="label-text text-black">Rating</span>
                         </label>
                         <label className="input-group input-group-vertical">
-                        <input type="text" placeholder="category" name="rating" className="input input-bordered md:w-full bg-[#F4F3F0]" />
+                        <input type="text" placeholder="give rating on 10" name="rating" className="input input-bordered md:w-full bg-[#F4F3F0]" />
                         </label>
                         </div>
                        

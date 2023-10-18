@@ -13,7 +13,7 @@ const Products = () => {
     return (
         <div>
        
-          <div className="grid md:grid-cols-3 mt-10">
+          <div className="grid md:grid-cols-3 mt-10 gap-10">
           {
                 dphones?.map(phone=><Product key={phone._id} phone={phone}></Product>)
             }

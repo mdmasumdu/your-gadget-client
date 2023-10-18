@@ -1,8 +1,16 @@
 /* eslint-disable react/prop-types */
 
+import { useNavigate } from "react-router-dom";
+
 const Product = ({phone}) => {
+    const {_id,brandname,photo,productname,rating,shortdescription}=phone;
+
+    const navigate = useNavigate()
+    const detailhandler =(id)=>{
+        navigate(`/details/${id}`)
+    }
     console.log(phone);
-    const {brandname,photo,productname,rating,shortdescription}=phone
+   
     return (
         <div>
             <div className="card bg-base-100 shadow-xl">
@@ -15,7 +23,7 @@ const Product = ({phone}) => {
     <h1>Rating:{rating}</h1>
     <p>{shortdescription}</p>
     <div className="card-actions">
-      <button className="btn btn-primary">Details</button>
+      <button className="btn btn-primary" onClick={()=>detailhandler(_id)}>Details</button>
       <button className="btn btn-primary">Update</button>
     </div>
   </div>
