@@ -1,0 +1,27 @@
+[
+    {
+      "brand": "Apple",
+      "image_url": "https://i.ibb.co/xMG3DvM/Apple-logo-grey-svg.png"
+    },
+    {
+      "brand": "Samsung",
+      "image_url": "https://i.ibb.co/wwYSk93/sam-removebg-preview.png"
+    },
+    {
+      "brand": "Google",
+      "image_url": "https://i.ibb.co/xSTj5xj/7611770.png"
+    },
+    {
+      "brand": "Sony",
+      "image_url": "https://i.ibb.co/khwYy8V/sony-removebg-preview.png"
+    },
+    {
+      "brand": "HP",
+      "image_url": "https://i.ibb.co/jrx1KgL/HP-logo-630x630.png"
+    },
+    {
+      "brand": "Intel",
+      "image_url": "https://i.ibb.co/bmHhJfH/intel-removebg-preview.png"
+    }
+  ]
+  
