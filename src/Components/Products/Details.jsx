@@ -1,7 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -23,7 +21,7 @@ const Details = () => {
       const newpho ={productname,brandname,photo,price,rating,shortdescription}
       
       console.log(pho)
-      fetch('http://localhost:5000/cart',{
+      fetch('https://your-gadget-server-kvo0z1abw-md-masums-projects.vercel.app/cart',{
         method:"POST",
         headers:{
           "content-type":"application/json"
@@ -48,32 +46,8 @@ const Details = () => {
       
     }
     return (
-      <div>
-        <div className="w-1/2 mx-auto mt-10">
-         <Swiper
-      // install Swiper modules
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={50}
-      slidesPerView={1}
-      navigation
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
-    >
-      
-      
-      <SwiperSlide><img src={'https://i.ibb.co/GVrRySQ/3936530.jpg'} alt="" /></SwiperSlide>
-    
-
-    <SwiperSlide><img src={'https://i.ibb.co/7pyHhfy/7857966.jpg'} alt="" /></SwiperSlide>
-    <SwiperSlide><img src={"https://i.ibb.co/mHrGdWt/198279-OYNXAW-589.jpg"} alt="" /></SwiperSlide>
-     
-  </Swiper>
-  </div>
-
-       
-       <div className="card lg:card-side border border-red-700 p-5 shadow-2xl mt-10">
+      <div>  
+       <div className="card lg:card-side  p-5 shadow-2xl mt-10">
   <figure><img src={photo} alt="Album"/></figure>
   <div className="card-body">
     <div>

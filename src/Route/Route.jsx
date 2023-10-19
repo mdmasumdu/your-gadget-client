@@ -31,23 +31,23 @@ const route =createBrowserRouter([
             },
             {
                 path:"/product/:brand",
-                loader:()=>fetch('http://localhost:5000/products'),
+                loader:()=>fetch('https://your-gadget-server-kvo0z1abw-md-masums-projects.vercel.app/products'),
                 element:<Products></Products>
             },
             {
                 path:"/details/:id",
-                loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`),
+                loader:({params})=>fetch(`https://your-gadget-server-kvo0z1abw-md-masums-projects.vercel.app/products/${params.id}`),
                 element:<Privateroute><Details></Details></Privateroute>
             },
             {
                 path:"/update/:id",
-                loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`),
+                loader:({params})=>fetch(`https://your-gadget-server-kvo0z1abw-md-masums-projects.vercel.app/products/${params.id}`),
                 element:<Privateroute><Update></Update></Privateroute>
             }
             ,
             {
                 path:"/mycart",
-                loader:()=>fetch('http://localhost:5000/cart'),
+                loader:()=>fetch('https://your-gadget-server-kvo0z1abw-md-masums-projects.vercel.app/cart'),
                 element:<Privateroute><Cart></Cart></Privateroute>
             },
             {
