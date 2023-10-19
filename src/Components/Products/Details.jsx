@@ -18,13 +18,17 @@ const Details = () => {
 
 
     const addtocartHanler =(pho)=>{
+ const {productname,brandname,photo,price,rating,shortdescription} =pho ;
+
+      const newpho ={productname,brandname,photo,price,rating,shortdescription}
+      
       console.log(pho)
       fetch('http://localhost:5000/cart',{
         method:"POST",
         headers:{
           "content-type":"application/json"
         },
-        body: JSON.stringify(pho)
+        body: JSON.stringify(newpho)
       })
       .then(res=>res.json())
       .then(data=>{

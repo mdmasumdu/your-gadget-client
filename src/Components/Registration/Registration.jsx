@@ -75,7 +75,9 @@ const {createuser,update}= useContext(AuthContext);
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Register Now now!</h1>
-            <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <p className="py-6">Welcome to Your-Gadget, your one-stop destination for all your gadget and electronic needs! We are a premier gadget and electronic store dedicated to providing you with the latest and greatest in technology. Whether you are a tech enthusiast, a casual user, or a professional, we  have got something for everyone.
+
+Explore our wide range of cutting-edge gadgets, from smartphones and laptops to smart home devices and wearables. Our shelves are stocked with the most popular brands and the newest releases, ensuring you stay ahead in the ever-evolving world of technology.</p>
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <form onSubmit={registerhandler} className="card-body">

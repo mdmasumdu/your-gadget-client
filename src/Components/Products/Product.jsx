@@ -18,15 +18,15 @@ const Product = ({phone}) => {
     return (
         <div>
             {
-             <div className="card bg-base-100 shadow-xl">
+             <div className="card bg-slate-300 shadow-xl">
               <figure className="px-10 pt-10">
                 <img src={photo} alt="Shoes" className="rounded-xl h-72" />
               </figure>
               <div className="card-body items-center text-center">
                 <h2 className="card-title">{productname}</h2>
-                <p>{brandname}</p>
-                <h1>Rating:{rating}</h1>
-                <p>{shortdescription}</p>
+                <p>Brand: {brandname}</p>
+                <h1>Rating: {rating}/10</h1>
+                <p className="h-16 overflow-scroll">{shortdescription}</p>
                  <p>Price: ${price}</p>
                 <div className="card-actions">
                   <button className="btn btn-primary" onClick={()=>detailhandler(_id)}>Details</button>

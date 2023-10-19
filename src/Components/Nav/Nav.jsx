@@ -8,8 +8,8 @@ const Nav = () => {
 
     const links =<>
       <NavLink to={`/`}>Home</NavLink>
-      <NavLink to={`/addproduct`}>ADD Product</NavLink>
-      <NavLink to={`/mycart`}>MY Cart</NavLink>
+      <NavLink to={`/addproduct`}>ADD-Product</NavLink>
+      <NavLink to={`/mycart`}>MY-Cart</NavLink>
       {
         user ? "" : <NavLink to={`/login`}>Login</NavLink> 
       }   
