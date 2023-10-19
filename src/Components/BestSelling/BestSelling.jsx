@@ -12,7 +12,7 @@ const[bests,setBests] =useState([])
 
     console.log(bests)
     return (
-        <div>
+        <div className="mb-10 p-5">
             <h1 className="text-center font-bold text-4xl mt-10 mb-10">Our Best Selling Products</h1>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {
