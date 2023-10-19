@@ -3,11 +3,15 @@
 import { useNavigate } from "react-router-dom";
 
 const Product = ({phone}) => {
-    const {_id,brandname,photo,productname,rating,shortdescription}=phone;
+    const {_id,brandname,photo,productname,rating,shortdescription,price}=phone;
 
     const navigate = useNavigate()
+
     const detailhandler =(id)=>{
         navigate(`/details/${id}`)
+    }
+    const updatehandler =(id)=>{
+        navigate(`/update/${id}`)
     }
     console.log(phone);
    
@@ -22,9 +26,10 @@ const Product = ({phone}) => {
     <p>{brandname}</p>
     <h1>Rating:{rating}</h1>
     <p>{shortdescription}</p>
+     <p>Price: ${price}</p>
     <div className="card-actions">
       <button className="btn btn-primary" onClick={()=>detailhandler(_id)}>Details</button>
-      <button className="btn btn-primary">Update</button>
+      <button className="btn btn-primary" onClick={()=>updatehandler(_id)}>Update</button>
     </div>
   </div>
 </div>
