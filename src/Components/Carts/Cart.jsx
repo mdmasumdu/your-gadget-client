@@ -33,11 +33,12 @@ const Cart = () => {
                 
                 cartproducts == '' ? <p className="text-center font-bold text-3xl">NO product has been added to cart</p> :
                     <div className="overflow-x-auto">
+                      <h1 className="text-center text-4xl font-bold mt-10 mb-10">Your Cart Here</h1>
                     <table className="table">
                       {/* head */}
                       <thead>
                         <tr>
-                          <th></th>
+                          <th>Serial</th>
                           <th>Product Name</th>
                           <th>Brand</th>
                           <th>Price</th>
@@ -47,7 +48,7 @@ const Cart = () => {
                       <tbody>
                       {
                           cartproducts.map((cartitem,idx)=>   
-                              <tr  key={cartitem._id} className="bg-base-200">
+                              <tr  key={cartitem._id} className="text-black">
                                 <th>{idx + 1}</th>
                                 <td>{cartitem.productname}</td>
                                 <td>{cartitem.brandname}</td>

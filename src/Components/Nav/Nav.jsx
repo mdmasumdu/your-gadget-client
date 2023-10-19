@@ -1,16 +1,29 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 
 const Nav = () => {
+      const {user,logout}= useContext(AuthContext);
 
     const links =<>
       <NavLink to={`/`}>Home</NavLink>
       <NavLink to={`/addproduct`}>ADD Product</NavLink>
       <NavLink to={`/mycart`}>MY Cart</NavLink>
-      <NavLink to={`/login`}>Login</NavLink>
-      
-     
+      {
+        user ? "" : <NavLink to={`/login`}>Login</NavLink> 
+      }   
     </>
+
+// sign out 
+
+const hadnlelogout =()=>{
+
+  logout()
+  .then(()=>{})
+  .catch(()=>{})
+}
+console.log(user)  
     return (
         <div className="navbar bg-purple-600 text-white p-6">
         <div className="navbar-start">
@@ -30,22 +43,21 @@ const Nav = () => {
           </ul>
         </div>
         <div className="navbar-end">
-        <div className="dropdown dropdown-end">
-      <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-        <div className="w-10 rounded-full">
-          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-        </div>
-      </label>
-      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-black">
-        <li>
-          <a>
-            Profile
-          </a>
-        </li>
-        <li><a>Settings</a></li>
-        <li><a>Logout</a></li>
-      </ul>
-    </div>
+         {
+          user ? <div className="dropdown dropdown-end flex flex-col items-center">
+            <h1>{user.displayName}</h1>
+          <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+            <div className="w-10 rounded-full">
+              <img src={user.photoURL} />
+            </div>
+          </label>
+          <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-black">
+
+            <button onClick={hadnlelogout}>Logout</button>
+          </ul>
+        </div> :<button className="text-xl font-bold"> <NavLink to="registration">Registration</NavLink></button>
+         }
+        
         </div>
       </div>
     );

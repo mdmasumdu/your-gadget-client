@@ -28,14 +28,16 @@ const Details = () => {
       })
       .then(res=>res.json())
       .then(data=>{
+        console.log(data)
         if(data.insertedId){
-          Swal.fire({
+        return  Swal.fire({
               title: 'success!',
               text: 'Added to cart',
               icon: 'success',
               confirmButtonText: 'quit'
             })
       }
+        
 
       })
 
