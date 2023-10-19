@@ -1,0 +1,32 @@
+[
+    {
+        "product_name": "Iphone XS",
+        "img": "https://i.ibb.co/VQS2Nzs/apple-iphone-xs-max-5-removebg-preview.png",
+        "price": 700.99
+    },
+    {
+        "product_name": "Iphone 11",
+        "img": "https://i.ibb.co/BZmddNn/apple-iphone-11-2-removebg-preview.png",
+        "price": 850.99
+    },
+    {
+        "product_name": "HP OMEN 16-c0456AX Ryze",
+        "img": "https://i.ibb.co/JrDMf98/omen-16-b0184ax-01-500x500-removebg-preview.png",
+        "price": 1199.99
+    },
+    {
+        "product_name": "Google Pixel 6a",
+        "img": "https://i.ibb.co/y66XFf1/Sage-8677-removebg-preview.png",
+        "price": 699.99
+    },
+    {
+        "product_name": "Samsung Galaxy A14",
+        "img": "https://i.ibb.co/zmZnRr2/A23-removebg-preview.png",
+        "price": 449.99
+    },
+    {
+        "product_name": "HP 15s-fq3617TU",
+        "img": "https://i.ibb.co/CtrqgZv/15s-fq2597tu-01-500x500-removebg-preview.png",
+        "price": 1200.99
+    }
+]
