@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
-import {  useLocation, useNavigate } from "react-router-dom";
+import {  NavLink, useLocation, useNavigate } from "react-router-dom";
 
 
 const Login = () => {
@@ -100,6 +100,9 @@ const Login = () => {
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                 </label>
+                <div>
+                  <p>New here? Please <NavLink className="text-blue-600" to="/registration">Register</NavLink></p>
+                </div>
               </div>
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Login</button>

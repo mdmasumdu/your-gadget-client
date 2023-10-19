@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import { NavLink } from "react-router-dom";
 
 const Registration = () => {
 
@@ -105,10 +106,15 @@ const {createuser,update}= useContext(AuthContext);
                 </label>
                 <input type="text" placeholder="PhotoLink" name="photo" className="input input-bordered" required />
               </div>
+
+              <div>
+                  <p>ALready have an acoount? Please <NavLink className="text-blue-600" to="/login">Login</NavLink></p>
+                </div>
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Register</button>
               </div>
             </form>
+
           </div>
         </div>
       </div>

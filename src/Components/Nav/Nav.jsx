@@ -55,7 +55,7 @@ console.log(user)
 
             <button onClick={hadnlelogout}>Logout</button>
           </ul>
-        </div> :<button className="text-xl font-bold"> <NavLink to="registration">Registration</NavLink></button>
+        </div> :<button className="text-xl font-bold"> <NavLink to="/registration">Registration</NavLink></button>
          }
         
         </div>
