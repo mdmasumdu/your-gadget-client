@@ -25,7 +25,7 @@ const hadnlelogout =()=>{
 }
 console.log(user)  
     return (
-        <div className="navbar bg-purple-600 text-white p-6">
+        <div className="navbar bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-white p-6">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden text-black">

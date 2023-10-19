@@ -18,7 +18,7 @@ const Product = ({phone}) => {
     return (
         <div>
             {
-             <div className="card bg-slate-300 shadow-xl">
+             <div className="card bg-slate-50 shadow-xl">
               <figure className="px-10 pt-10">
                 <img src={photo} alt="Shoes" className="rounded-xl h-72" />
               </figure>
