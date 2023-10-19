@@ -1,8 +1,6 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##5 Features of My website
+1.My website has a navbar,banner,footer,brand section,best selling products section,why chose section
+2.On clikcing on the brand anyone can see available of products of that particular brand
+3.Anyone can click on details button on products after login and can see the details of the product
+4.In the details page of the product,there is a add to cart button,on clicking add to car button he/she can add the product to cart
+5.Clicking on profile icon which is in the  right side  of the navbar can see logout button and clicking on it anyone can logout
