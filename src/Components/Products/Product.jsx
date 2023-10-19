@@ -17,22 +17,24 @@ const Product = ({phone}) => {
    
     return (
         <div>
-            <div className="card bg-base-100 shadow-xl">
-  <figure className="px-10 pt-10">
-    <img src={photo} alt="Shoes" className="rounded-xl h-72" />
-  </figure>
-  <div className="card-body items-center text-center">
-    <h2 className="card-title">{productname}</h2>
-    <p>{brandname}</p>
-    <h1>Rating:{rating}</h1>
-    <p>{shortdescription}</p>
-     <p>Price: ${price}</p>
-    <div className="card-actions">
-      <button className="btn btn-primary" onClick={()=>detailhandler(_id)}>Details</button>
-      <button className="btn btn-primary" onClick={()=>updatehandler(_id)}>Update</button>
-    </div>
-  </div>
-</div>
+            {
+             <div className="card bg-base-100 shadow-xl">
+              <figure className="px-10 pt-10">
+                <img src={photo} alt="Shoes" className="rounded-xl h-72" />
+              </figure>
+              <div className="card-body items-center text-center">
+                <h2 className="card-title">{productname}</h2>
+                <p>{brandname}</p>
+                <h1>Rating:{rating}</h1>
+                <p>{shortdescription}</p>
+                 <p>Price: ${price}</p>
+                <div className="card-actions">
+                  <button className="btn btn-primary" onClick={()=>detailhandler(_id)}>Details</button>
+                  <button className="btn btn-primary" onClick={()=>updatehandler(_id)}>Update</button>
+                </div>
+              </div>
+            </div>
+            }
             
         </div>
     );

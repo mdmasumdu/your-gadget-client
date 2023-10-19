@@ -9,11 +9,13 @@ import Update from "../Components/Update/Update";
 import Cart from "../Components/Carts/Cart";
 import Registration from "../Components/Registration/Registration";
 import Privateroute from "../Components/Privateroute";
+import Error from "../Components/Error";
 
 const route =createBrowserRouter([
     {
         path:"/",
         element:<Mainlayout></Mainlayout>,
+        errorElement:<Error></Error>,
         children:[
             {
                 path:"/",
@@ -40,7 +42,7 @@ const route =createBrowserRouter([
             {
                 path:"/update/:id",
                 loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`),
-                element:<Update></Update>
+                element:<Privateroute><Update></Update></Privateroute>
             }
             ,
             {
