@@ -1,19 +1,21 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 
 const Cart = () => {
 
-    
+    const {user} = useContext(AuthContext)
     const cartitems = useLoaderData()
-    const [cartproducts,setcartProducts] = useState(cartitems)
 
+    const mycart = cartitems?.filter(cartitem=> cartitem.emaiL === user.email )
 
+    const [cartproducts,setcartProducts] = useState(mycart)
 
-
+         
     const deleteHandler =(_id)=>{
         console.log(_id)
-        fetch(`https://your-gadget-server-kvo0z1abw-md-masums-projects.vercel.app/cart/${_id}`,{
+        fetch(`https://your-gadget-server.vercel.app/cart/${_id}`,{
             method:"DELETE"
         })
         .then(res=>res.json())
@@ -31,9 +33,9 @@ const Cart = () => {
             {
                 
                 
-                cartproducts == '' ? <p className="text-center font-bold text-3xl">NO product has been added to cart</p> :
+                cartproducts == '' ? <p className="text-center font-bold text-3xl mt-20 text-red-700">NO product has been added to cart</p> :
                     <div className="overflow-x-auto">
-                      <h1 className="text-center text-4xl font-bold mt-10 mb-10">Your Cart Here</h1>
+                      <h1 className="text-center text-4xl font-bold mt-10 mb-10 ">Your Cart Here</h1>
                     <table className="table">
                       {/* head */}
                       <thead>
@@ -47,7 +49,7 @@ const Cart = () => {
                       </thead>
                       <tbody>
                       {
-                          cartproducts.map((cartitem,idx)=>   
+                          cartproducts?.map((cartitem,idx)=>   
                               <tr  key={cartitem._id} className="text-black">
                                 <th>{idx + 1}</th>
                                 <td>{cartitem.productname}</td>

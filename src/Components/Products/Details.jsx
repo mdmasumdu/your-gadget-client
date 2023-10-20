@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import {  useLoaderData } from "react-router-dom";
 
 
 // Import Swiper styles
@@ -7,21 +7,26 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import Swal from "sweetalert2";
+import { useContext } from "react";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Details = () => {
 
+
+  const {user} = useContext(AuthContext)
     const phone = useLoaderData()
     const {brandname,photo,productname,rating,shortdescription,price}=phone;
        
+ console.log(user.email)
 
-
+// add to cart handler
     const addtocartHanler =(pho)=>{
  const {productname,brandname,photo,price,rating,shortdescription} =pho ;
 
-      const newpho ={productname,brandname,photo,price,rating,shortdescription}
+      const newpho ={productname,brandname,photo,price,rating,shortdescription,emaiL:user.email}
       
       console.log(pho)
-      fetch('https://your-gadget-server-kvo0z1abw-md-masums-projects.vercel.app/cart',{
+      fetch('https://your-gadget-server.vercel.app/cart',{
         method:"POST",
         headers:{
           "content-type":"application/json"

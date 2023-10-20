@@ -18,7 +18,7 @@ const AddProduct = () => {
         const newProduct= {productname,brandname,price,rating,shortdescription,photo}
         console.log(newProduct)
 
-        fetch('https://your-gadget-server-kvo0z1abw-md-masums-projects.vercel.app/addproduct',{
+        fetch('https://your-gadget-server.vercel.app/addproduct',{
             method:"POST",
             headers:{
                 "content-type":"application/json"

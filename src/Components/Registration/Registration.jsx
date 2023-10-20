@@ -1,12 +1,19 @@
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Registration = () => {
 
-const {createuser,update}= useContext(AuthContext);
+const {createuser,update,logout}= useContext(AuthContext);
 
+const navigate = useNavigate()
+
+const signout =()=>{
+  logout()
+  .then(()=>{})
+  .catch(()=>{})
+}
 
     const registerhandler=(e)=>{
         e.preventDefault()
@@ -52,12 +59,16 @@ const {createuser,update}= useContext(AuthContext);
                     .then(()=>{})
                     .catch(()=>{})
 
+                    signout()
+
                     Swal.fire({
                         title: 'success!',
-                        text: 'succesfully registered',
+                        text: 'succesfully registered,please login now',
                         icon: 'success',
                         confirmButtonText: 'quit'
                       })
+
+                      navigate(`/login`)
                 }
              })
              .catch(err=>{

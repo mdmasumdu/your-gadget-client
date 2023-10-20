@@ -6,7 +6,7 @@ const Best = ({best}) => {
         <div className="card bg-slate-50 shadow-xl">
   <div className="card-body items-center">
     <h2 className="card-title">{best.product_name}</h2>
-    <p>{best.price}</p>
+    <p>Price: $ {best.price}</p>
   </div>
   <figure><img src={best.img} alt="Shoes" /></figure>
 </div>
