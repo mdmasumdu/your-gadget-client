@@ -8,7 +8,7 @@ const Best = ({best}) => {
     <h2 className="card-title">{best.product_name}</h2>
     <p>Price: $ {best.price}</p>
   </div>
-  <figure><img src={best.img} alt="Shoes" /></figure>
+  <figure><img className="h-72" src={best.img} alt="Shoes" /></figure>
 </div>
     );
 };

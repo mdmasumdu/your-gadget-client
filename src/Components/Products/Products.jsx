@@ -10,7 +10,7 @@ const Products = () => {
 
    console.log(brand.toLowerCase())
 
-    const dphones = products.filter(product=> brand.toLowerCase()===product.brandname.toLowerCase())
+    const dphones = products?.filter(product=> brand.toLowerCase()===product.brandname.toLowerCase())
     console.log(dphones)
 
     return (

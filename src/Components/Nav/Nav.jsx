@@ -7,11 +7,11 @@ const Nav = () => {
       const {user,logout}= useContext(AuthContext);
 
     const links =<>
-      <NavLink to={`/`}>Home</NavLink>
-      <NavLink to={`/addproduct`}>ADD-Product</NavLink>
-      <NavLink to={`/mycart`}>MY-Cart</NavLink>
+      <NavLink className={({isActive})=>isActive ? 'text-green-700 underline': ''} to={`/`}>Home</NavLink>
+      <NavLink  className={({isActive})=>isActive ? 'text-green-700 underline': ''} to={`/addproduct`}>ADD-Product</NavLink>
+      <NavLink  className={({isActive})=>isActive ? 'text-green-700 underline': ''} to={`/mycart`}>MY-Cart</NavLink>
       {
-        user ? "" : <NavLink to={`/login`}>Login</NavLink> 
+        user ? "" : <NavLink  className={({isActive})=>isActive ? 'text-green-700 underline': ''} to={`/login`}>Login</NavLink> 
       }   
     </>
 
@@ -25,17 +25,17 @@ const hadnlelogout =()=>{
 }
 console.log(user)  
     return (
-        <div className="navbar bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-white p-6">
+        <div className="navbar shadow p-6">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden text-black">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
             </label>
-            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-black">
+            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 rounded-box w-52 text-black">
               {links}
             </ul>
           </div>
-          <a><img className="w-20" src={'https://i.ibb.co/DRXsLhz/Light-Blue-Modern-Technology-Logo-removebg-preview.png'} alt="" /></a>
+          <a><img className="w-20" src={'https://i.ibb.co/cX99X8G/logo-removebg-preview.png'} alt="" /></a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal gap-5 text-xl font-bold">
@@ -55,7 +55,7 @@ console.log(user)
 
             <button onClick={hadnlelogout}>Logout</button>
           </ul>
-        </div> :<button className="text-xl font-bold"> <NavLink to="/registration">Registration</NavLink></button>
+        </div> :<button className="text-xl font-bold"> <NavLink  className={({isActive})=>isActive ? 'text-green-700 underline': ''} to="/registration">Registration</NavLink></button>
          }
         
         </div>
